@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMNITRIX - Your One-Stop Tech Shop</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+        .slideshow-container {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            width: 100%;
+            height: 100%;
+            display: none;
+            text-align: center;
+        }
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OMNITRIX</h1>
+        <nav>
+            <ul>
+                <li><a href="welcome.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shopping Cart</a></li>
+                <li><a href="wishlist.html">Wish List</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="slideshow-container">
+            <div class="slides fade">
+                <img src="new_arrival1.jpg" alt="New Arrival 1">
+            </div>
+            <div class="slides fade">
+                <img src="headphones.jfif" alt="New Arrival 2">
+            </div>
+            <div class="slides fade">
+                <img src="phone.jfif" alt="New Arrival 3">
+            </div>
+        </section>
+        
+        <section class="hero">
+            <h2>Your One-Stop Shop for Everything Tech</h2>
+            <p>Discover articles, hardware, software, gaming items, books, forums, and much more!</p>
+            <a href="shop.html" class="btn">Explore Now</a>
+        </section>
+        
+        <section class="features">
+            <h3>Our Categories</h3>
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="gaming.html">Gaming</a></li>
+                <li><a href="merch.html">Merchandise</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 OMNITRIX | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+</html>
