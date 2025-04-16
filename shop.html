@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - OMNITRIX</title>
     <link rel="stylesheet" href="project.css">
+    <script>
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            alert(productName + " has been added to your cart.");
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart-list');
+            const total = document.getElementById('cart-total');
+            cartList.innerHTML = '';
+            let sum = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item.name + " - $" + item.price;
+                cartList.appendChild(li);
+                sum += item.price;
+            });
+            total.textContent = "Total: $" + sum.toFixed(2);
+        }
+    </script>
 </head>
-<details class="menu-button">
-    <summary>☰ </summary>
-    <ul>
-        <li><a href="signin.html">Sign In</a></li>
-        <li><a href="shop.html">Cart</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-</details>
 <body>
+    <details class="menu-button">
+        <summary>☰</summary>
+        <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="#cart">Cart</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </details>
+
     <header>
         <h1>Shop</h1>
         <nav>
@@ -26,6 +50,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <h2>Explore Our Products</h2>
         <p>Find the latest tech gadgets, software, and accessories here.</p>
@@ -37,36 +62,47 @@
                     <th scope="col">Category</th>
                     <th scope="col">Price</th>
                     <th scope="col">Availability</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://www.bestbuy.com/site/acer-chromebook-plus-516-ge-cloud-gaming-laptop-with-google-ai-16-2560x1600-120hz-intel-core-5-120u-8gb-ram-256gb-ssd-obsidian-black/6576961.p?skuId=6576961&ref=212&loc=17931407033&gclsrc=aw.ds&gad_source=1&gbraid=0AAAAAD-ORIiAbAIY2dGZk1c-Ax57l7H4-&gclid=Cj0KCQjwh_i_BhCzARIsANimeoHQsrkbiZTXBHs6_RD7U1daASnG1Dto4TVYavnGmzb5m2dgP11xbTQaArwVEALw_wcB"></a>  Gaming Laptop</td>
+                    <td>Gaming Laptop</td>
                     <td>Computers</td>
-                    <td>$1,200</td>
+                    <td>$1200</td>
                     <td>In Stock</td>
+                    <td><button onclick="addToCart('Gaming Laptop', 1200)">Add to Cart</button></td>
                 </tr>
                 <tr>
                     <td>Wireless Headset</td>
                     <td>Accessories</td>
                     <td>$150</td>
                     <td>Out of Stock</td>
+                    <td><button disabled>Out of Stock</button></td>
                 </tr>
                 <tr>
                     <td>Smartphone</td>
                     <td>Phones/Tablets</td>
                     <td>$899</td>
                     <td>In Stock</td>
+                    <td><button onclick="addToCart('Smartphone', 899)">Add to Cart</button></td>
                 </tr>
             </tbody>
         </table>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID_HERE">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit">
-            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
+
+        <section id="cart">
+            <h3>Your Cart</h3>
+            <ul id="cart-list"></ul>
+            <p id="cart-total">Total: $0.00</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID_HERE">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"  name="submit">
+                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2025 OMNITRIX | All Rights Reserved</p>
     </footer>
