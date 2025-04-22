@@ -10,7 +10,7 @@ A responsive website for OMNITRIX featuring a homepage, product shop, user inter
 - index.html – Main landing page
 - shop.html – Shop page with products and add-to-cart functionality
 - contact.html, about.html, etc. – Additional site pages
-- styles.css – Custom styling
+- Project.css – Custom styling
 - images – Contains media and icons used on the site
 
 # Installation
