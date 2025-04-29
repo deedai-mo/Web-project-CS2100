@@ -4,7 +4,7 @@
 A responsive website for OMNITRIX featuring a homepage, product shop, user interaction, and Payhip integration for e-commerce functionality.
 
 # Deployment
-[Click here to view the live website](https://github.com/deedai-mo/Web-project-CS2100.git)
+[Click here to view the live website](file:///Users/daniellamogaha/Documents/GitHub/Web-project-CS2100/welcome.html)
 
 # File Structure
 - index.html – Main landing page
