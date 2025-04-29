@@ -3,46 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - OMNITRIX</title>
-    <meta name="description" content="Reach out to the OMNITRIX team for inquiries, support, or collaborations. We are here to help.">
-    <link rel="stylesheet" href="project.css">
+    <title>Contact - OMNITRIX</title>
+    <meta name="description" content="Get in touch with OMNITRIX for inquiries and support.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<details class="menu-button">
-    <summary>☰ </summary>
-    <ul>
-        <li><a href="signin.html">Sign In</a></li>
-        <li><a href="shop.html">Cart</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-</details>
 <body>
     <header>
         <h1>Contact Us</h1>
         <nav>
             <ul>
-                <li><a href="welcome.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Get in Touch</h2>
-        <p>Have questions or feedback? Reach out to us using the form below.</p>
-        <form action="https://webdevbasics.net/scripts/demo.php" method="post">
-            <label for="name"> Full name:</label> 
-            <input type="text" id="name" name="name" required>
-            <label for="email"> Email:</label> 
-            <input type="email" id="email" name="email" required>
-            <label for="subject"> subject:</label> 
-            <input type="text" id="subject" name="subject" >
-            <label for="message"> Message:</label> 
-            <textarea id="message" name="message" rows="5">
-            </textarea>
-            <button type="submit">Send Message</button>
+        <h2>We'd Love to Hear From You</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name"><br>
 
-                </form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email"><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea><br>
+
+            <input type="submit" value="Send">
+        </form>
     </main>
     <footer>
         <p>&copy; 2025 OMNITRIX | All Rights Reserved</p>
