@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - OMNITRIX</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OMNITRIX</title>
+    <meta name="description" content="Get in touch with OMNITRIX for inquiries and support.">
+    <link rel="stylesheet" href="project.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>Get in Touch</h2>
-    <form onsubmit="return validateForm()">
-      <label for="name">Name:</label>
-      <input type="text" id="name" placeholder="Your Name" /><br/>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>We'd Love to Hear From You</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name"><br>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="Your Email" /><br/>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email"><br>
 
-      <label for="message">Message:</label>
-      <textarea id="message" placeholder="Write your message here..."></textarea><br/>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea><br>
 
-      <input type="submit" value="Send" />
-    </form>
-  </main>
-  <footer>
-    <p>&copy; 2025 OMNITRIX | All Rights Reserved</p>
-  </footer>
+            <input type="submit" value="Send">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 OMNITRIX | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
