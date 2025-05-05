@@ -19,3 +19,7 @@ No installation needed. Open index.html in a browser or view it live via GitHub 
 # Usage
 Explore products, add to cart, and check out using Payhip.
 
+# final submission 
+DEPLOYMENT LINK : https://deedai-mo.github.io/Web-project-CS2100/
+REPOSITORY LINK: https://github.com/deedai-mo/Web-project-CS2100.git
+
